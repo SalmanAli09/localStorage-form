@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Data Hub</title>
+</head>
+
+<body>
+
+    <div id="body_main">
+
+        <div id="nav_bar">Self Registration Form </div>
+        <a href="Admin Panel/admin.html" target="_blank" id="panelLink">Admin Panel</a>
+        <div id="logo"><img src="assets/logo.png" alt="" id="logo_nav"></div>
+        <div id="container">
+            <table align="center">
+                <tr>
+                    <td>Full Name <br> <input type="text" name="name" id="name" placeholder="Enter Full Name" required>
+                    </td>
+                    <td>Father Name <br><input type="text" name="fname" id="fname" placeholder="Father Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date Of Birth <br> <input type="date" name="dob" id="dob"></td>
+                    <td>Enter Your Gender <br>
+                        <select value="gender" id="gender" required>
+                            <option selected disabled></option>
+                            <option name="male" id="male">Male</option>
+                            <option name="female" id="female">Female</option>
+                            <option name="cus" id="cus">Custom</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email <br> <input type="email" name="mail" id="mail" placeholder="example@gmail.com" required>
+                    </td>
+                    <td>Contact Number <br> <input type="" name="num" id="num" placeholder="03XX-XXXXXXX"
+                            required></td>
+                </tr>
+                <tr>
+                    <td>Cnic <br> <input type="text" id="cnic" placeholder="XXXXX-XXXXXXX-X" required></td>
+                    <td>Father's Cnic <br> <input type="text" id="fcnic" placeholder="XXXXX-XXXXXXX-X" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Full and Permanent Address <br> <input type="text" id="add" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p id="qual">Last Qualifiaction </p><br>
+                        <input type="radio" name="Matric" id="matric" value="matric"> <span id="edu">Matric</span>
+                        <input type="radio" name="Matric" id="inter" value="inter"> <span id="edu">Intermediate</span>
+                        <input type="radio" name="Matric" id="grad" value="grad"> <span id="edu">Graduate</span>
+                        <input type="radio" name="Matric" id="underGrad" value="underGrad"> <span
+                            id="edu">UnderGraduate</span>
+                        <input type="radio" name="Matric" id="master" value="master"> <span id="edu">Masters</span>
+                        <input type="radio" name="Matric" id="phd" value="phd"> <span id="edu">Phd</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">PassportSize Photo <br> <input type="file" name="" id="pic" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button id="subBtn" onclick="submit()">Submit</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    
+</body>
+<script src="index.js"></script>
+
+</html>

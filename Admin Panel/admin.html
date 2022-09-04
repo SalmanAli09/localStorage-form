@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="adminLogin">
+        <div id="pageHeading">
+            <h1>Admin Login</h1>
+        </div>
+        <div id="idPass">
+            <table id="logintab">
+                <tr>
+                    <td><i class="fa fa-user" aria-hidden="true" id="icon"></i><input type="text" placeholder="Username"
+                            id="user"></input></td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-unlock-alt" aria-hidden="true" id="icon"></i><input type="password"
+                            placeholder="Enter password" id="pass"></input></td>
+                </tr>
+            </table>
+        </div>
+        <div id="btn-1">
+            <button id="adminloginbtn" onclick="moveToAdmin()">Login</button>
+        </div>
+    </div>
+    <table id="tableData">
+        <tr id="tableDataRow">
+            <th id="tableHeading">S.No</th>
+            <th id="tableHeading">Image</th>
+            <th id="tableHeading">Name</th>
+            <th id="tableHeading">Father Name</th>
+            <th id="tableHeading">D.O.B</th>
+            <th id="tableHeading">Gender</th>
+            <th id="tableHeading">Email</th>
+            <th id="tableHeading">Nunber</th>
+            <th id="tableHeading">Cnic</th>
+            <th id="tableHeading">F-Cnic</th>
+            <th id="tableHeading">Address</th>
+            <th id="tableHeading">Buttons</th>
+        </tr>
+    </table>
+
+</body>
+<script src="admin.js"></script>
+
+</html>

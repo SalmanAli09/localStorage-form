@@ -1,0 +1,102 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+#tableData {
+    display: none;
+    justify-content: center;
+    border-collapse: collapse;
+}
+
+#tableData th {
+    background-color: #122A5C;
+    color: white;
+    border: 1px solid white;
+    padding: 25px !important;
+}
+
+#tableData tr:hover {
+    background-color: rgba(231, 231, 231, 0.92);
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#tableData td,
+th {
+    padding: 15px !important;
+    border: 1px solid #122A5C;
+    text-align: center;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+}
+
+#adminLogin {
+    width: 500px;
+    height: max-content;
+    border: 1px solid #122A5C;
+    margin: 0px auto;
+    margin-top: 80px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 3px;
+}
+
+#pageHeading {
+    /* border: 1px solid black; */
+    width: auto;
+    height: max-content;
+    padding: 2px;
+    text-align: center;
+    background-color: #122A5C;
+    color: white;
+}
+
+#logintab {
+    margin-top: 80px;
+    width: 100%;
+    height: 150px;
+    border: none;
+    text-align: center;
+}
+
+#logintab input {
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #122A5C;
+    outline: none;
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+#icon {
+    position: relative;
+    left: 20px;
+    color: #122A5C;
+}
+
+#adminloginbtn {
+    width: 100%;
+    height: 65px;
+    margin-top: 100px;
+    font-size: 20px;
+    border: none;
+    background: #122A5C;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+#deletebtn {
+    background: rgba(255, 0, 0, 0.7);
+    padding: 5px;
+    width: 100px;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    
+}
