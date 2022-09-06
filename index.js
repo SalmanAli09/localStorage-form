@@ -11,6 +11,7 @@ function getData() {
     var cnic = document.getElementById("cnic").value;
     var fcnic = document.getElementById("fcnic").value;
     var img = document.getElementById("pic")
+    var add = document.getElementById("add")
 
     // REGEX 
 
@@ -18,7 +19,6 @@ function getData() {
     var fname_regex = /^[a-z ,.'-]+$/i
     var mail_regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     var number_regex = /^[\+]?[(]?[0-9]{4}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,5}$/
-    var add_regex = /^[0-9a-zA-Z\s,-]+$/
     var cnic_regex = /^[0-9+]{5}-[0-9+]{7}-[0-9]{1}$/
 
 
@@ -30,12 +30,16 @@ function getData() {
                         if (number_regex.test(number)) {
                             if (cnic_regex.test(cnic)) {
                                 if (cnic_regex.test(fcnic)) {
-                                    if (img.value) {
-                                        swal(nameCap + " You Are Successfully Registered", "", "success");
-                                        submit()
+                                    if (add.value) {
+                                        if (img.value) {
+                                            swal(nameCap + " You Are Successfully Registered", "", "success");
+                                            submit()
 
+                                        } else {
+                                            swal("Please Upload Your Image ", "", "warning");
+                                        }
                                     } else {
-                                        swal("Please Upload Your Image ", "", "warning");
+                                        swal("Enter Your Residensial Address", "", "error");
                                     }
                                 } else {
                                     swal("Enter Fathers's Cnic Number", "XXXXX-XXXXXXX-X", "error");
@@ -77,6 +81,7 @@ function submit() {
     var cnic = document.getElementById("cnic").value;
     var fcnic = document.getElementById("fcnic").value;
     var add = document.getElementById("add").value;
+    var addSmll = add.toLowerCase()
     var img = document.getElementById("pic")
     var imgSrc = URL.createObjectURL(img.files[0]);
 
@@ -98,7 +103,7 @@ function submit() {
         number: number,
         cnic: cnic,
         fcnic: fcnic,
-        add: add,
+        add: addSmll,
         img: imgSrc,
     }
     localStorage.setItem("data", JSON.stringify(obj))
