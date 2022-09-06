@@ -2,7 +2,7 @@
 function getData() {
 
     var name = document.getElementById("name").value;
-    var nameCap = name.slice(0,1).toUpperCase() + name.slice(1).toLowerCase();
+    var nameCap = name.slice(0, 1).toUpperCase() + name.slice(1).toLowerCase();
     var fname = document.getElementById("fname").value
     var mail = document.getElementById("mail").value;
     var gender = document.getElementById("gender");
@@ -10,7 +10,6 @@ function getData() {
     var number = document.getElementById("num").value;
     var cnic = document.getElementById("cnic").value;
     var fcnic = document.getElementById("fcnic").value;
-    var add = document.getElementById("add").value;
     var img = document.getElementById("pic")
 
     // REGEX 
@@ -31,16 +30,12 @@ function getData() {
                         if (number_regex.test(number)) {
                             if (cnic_regex.test(cnic)) {
                                 if (cnic_regex.test(fcnic)) {
-                                    if (add_regex.test(add)) {
-                                        if (img.value) {
-                                            swal(nameCap + " You Are Successfully Registered", "", "success");
-                                            submit()
+                                    if (img.value) {
+                                        swal(nameCap + " You Are Successfully Registered", "", "success");
+                                        submit()
 
-                                        } else {
-                                            swal("Please Upload Your Image ", "", "warning");
-                                        }
                                     } else {
-                                        swal("Enter Your Residensial Address", "", "error");
+                                        swal("Please Upload Your Image ", "", "warning");
                                     }
                                 } else {
                                     swal("Enter Fathers's Cnic Number", "XXXXX-XXXXXXX-X", "error");
@@ -72,9 +67,9 @@ function getData() {
 
 function submit() {
     var name = document.getElementById("name").value;
-    var nameCap = name.slice(0,1).toUpperCase() + name.slice(1).toLowerCase();
+    var nameCap = name.slice(0, 1).toUpperCase() + name.slice(1).toLowerCase();
     var fname = document.getElementById("fname").value
-    var fnameCap = fname.slice(0,1).toUpperCase() + fname.slice(1).toLowerCase();
+    var fnameCap = fname.slice(0, 1).toUpperCase() + fname.slice(1).toLowerCase();
     var mail = document.getElementById("mail").value;
     var dob = document.getElementById("dob").value;
     var gender = document.getElementById("gender").value;
