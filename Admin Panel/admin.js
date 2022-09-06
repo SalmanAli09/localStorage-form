@@ -5,14 +5,22 @@ var getForAdmin = JSON.parse(localStorage.getItem("data"))
 console.log(getForAdmin)
 
 function del() {
-    var deletethis = event.target.parentNode.parentNode.remove()
-    // console.log(deletethis)
-    // console.log(getForAdmin)
-    // // var check = ;
-    // localStorage.removeItem(localStorage.getItem("data","deletethis"))
-    // console.log()
-}
+    var deletethis = event.target.parentNode.parentNode.parentNode.remove();
+    // var getThisName = event.target.parentNode.parentNode.parentNode.children[2].firstChild
+    // var getForAdmin = JSON.parse(localStorage.getItem("data"))
+    // for (key in getForAdmin) {
+    //     console.log(key)
+    // }
+    // var getThisNamestring = getThisName.toString()
+    // console.log("Name of banda"+ typeof(getThisNamestring) , "name of key" + typeof(key) )
+    // for(i = 0 ; i < key.length ; i++){
+    //     if(key === "salman"){
+    //         alert("hahah")
+    //     }
+    //     console.log(key)
+    // }
 
+}
 
 // Edit Button
 function edit() {
@@ -27,6 +35,7 @@ function edit() {
     var newElem = document.getElementById("editbtn");
     console.log(newElem.appendChild(newtxt))
 }
+
 
 for (var key in getForAdmin) {
     document.getElementById("tableData").children[0].innerHTML +=
@@ -43,7 +52,7 @@ for (var key in getForAdmin) {
         <td>${getForAdmin[key].cnic}</td>
         <td>${getForAdmin[key].fcnic}</td>
         <td>${getForAdmin[key].add}</td>
-        <td><button onclick="del()" id="deletebtn"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+        <td><center><button onclick="del()" id="deletebtn">Delete</button></center></td>
         </tr>
 `
     serial++;
@@ -57,7 +66,7 @@ function moveToAdmin() {
     var user = document.getElementById("user").value;
     var pass = document.getElementById("pass").value;
     if (user === "admin" && pass === "admin") {
-        swal("Login Success!", "success");
+        swal("Login Success!", "", "success");
         document.getElementById("adminLogin").style.display = "none"
         document.getElementById("tableData").style.display = "flex"
     }

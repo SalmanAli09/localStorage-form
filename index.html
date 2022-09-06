@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Data Hub</title>
 </head>
 
@@ -13,7 +15,7 @@
 
     <div id="body_main">
 
-        <div id="nav_bar">Self Registration Form </div>
+        <div id="nav_bar">Registration Form </div>
         <a href="Admin Panel/admin.html" target="_blank" id="panelLink">Admin Panel</a>
         <div id="logo"><img src="assets/logo.png" alt="" id="logo_nav"></div>
         <div id="container">
@@ -38,7 +40,7 @@
                 <tr>
                     <td>Email <br> <input type="email" name="mail" id="mail" placeholder="example@gmail.com" required>
                     </td>
-                    <td>Contact Number <br> <input type="" name="num" id="num" placeholder="03XX-XXXXXXX"
+                    <td>Contact Number <br> <input type="" name="num" id="num" placeholder="03XXXXXXXXX"
                             required></td>
                 </tr>
                 <tr>
@@ -51,7 +53,7 @@
                 <tr>
                     <td colspan="2">
                         <p id="qual">Last Qualifiaction </p><br>
-                        <input type="radio" name="Matric" id="matric" value="matric"> <span id="edu">Matric</span>
+                        <input type="radio" name="Matric" id="matric" value="matric" checked> <span id="edu">Matric</span>
                         <input type="radio" name="Matric" id="inter" value="inter"> <span id="edu">Intermediate</span>
                         <input type="radio" name="Matric" id="grad" value="grad"> <span id="edu">Graduate</span>
                         <input type="radio" name="Matric" id="underGrad" value="underGrad"> <span
@@ -64,7 +66,7 @@
                     <td colspan="2">PassportSize Photo <br> <input type="file" name="" id="pic" required></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button id="subBtn" onclick="submit()">Submit</button></td>
+                    <td colspan="2"><button id="subBtn" onclick="getData()">Submit</button></td>
                 </tr>
             </table>
         </div>
